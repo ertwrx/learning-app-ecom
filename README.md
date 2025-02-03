@@ -1,4 +1,3 @@
-
 ## LAMP Stack App Dockerization for Learning Purposes
 
 ===========================================================
@@ -32,10 +31,17 @@ This docker-compose YAML file is licensed under the MIT License.
 
 ## Steps
 
+<<<<<<< HEAD
 -   Clone this repository: `git clone [your-repo-url]`
     
 
 -   Navigate into the repository directory: `cd [repo-name]`
+=======
+-   Clone this repository: `git clone https://github.com/ertwrx/learning-app-ecom.git`
+    
+
+-   Navigate into the repository directory: `cd learning-app-ecom`
+>>>>>>> saved-commits
     
 
 -   Run the app using Docker Compose: `docker-compose up -d`
@@ -71,3 +77,7 @@ This docker-compose YAML file is licensed under the MIT License.
 ----
 
 This repository is for learning purposes only. Please do not use this repository for production or commercial purposes.
+<<<<<<< HEAD
+=======
+>>>>>>> 0615d71 (Initial commit)
+>>>>>>> saved-commits
