@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  mariadb:
+    image: ertwrx/mariadb-ecomdb:latest
+    container_name: mariadb-ecomdb
+    environment:
+      - MARIADB_ROOT_PASSWORD=rootpassword
+      - MARIADB_USER=ecomuser
+      - MARIADB_PASSWORD=ecompassword
+      - MARIADB_DATABASE=ecomdb
+    ports:
+      - "3307:3306"
+    networks:
+      - ecom-network
+
+  ecomweb:
+    image: ertwrx/ecomweb-server:latest
+    container_name: ecomweb-server
+    environment:
+      - DB_HOST=mariadb-ecomdb
+      - DB_USER=ecomuser
+      - DB_PASSWORD=ecompassword
+      - DB_NAME=ecomdb
+    ports:
+      - "8080:80"
+    networks:
+      - ecom-network
+
+networks:
+  ecom-network:
+    driver: bridge
